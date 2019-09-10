@@ -20,12 +20,6 @@ import static org.junit.Assert.assertTrue;
 
 /**
  * Integration testing for RestAPI
- * Test data are initialised from src/test/resources/demo.sql
- * <p>
- * INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('test2',100.0000,'USD'); --ID =1
- * INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('test1',200.0000,'USD'); --ID =2
- * INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('test2',500.0000,'EUR'); --ID =3
- * INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('test1',500.0000,'EUR'); --ID =4
  */
 
 public class AccountServiceIntegratedTest extends AbstractServerConnectionProvider {
