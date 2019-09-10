@@ -1,27 +1,34 @@
-# Money transfer Rest API
-hi
+# Objective for Revolut Backend Test
 
-A Java RESTful API for money transfers between users accounts
+Design and implement a RESTful API (including data model and the backing implementation) for
+money transfers between accounts.
 
 ### Technologies
 - JAX-RS API
 - H2 in memory database
 - Log4j
-- Jetty Container (for Test and Demo app)
+- Jetty Container
 - Apache HTTP Client
 
 
 ### How to run
 ```sh
+
 mvn exec:java
 ```
 
 Application starts a jetty server on localhost port 8080 An H2 in memory database initialized with some sample user and account data To view
 
-- http://localhost:8080/user/test1
-- http://localhost:8080/user/test2
 - http://localhost:8080/account/1
 - http://localhost:8080/account/2
+- http://localhost:8080/account/3
+- http://localhost:8080/account/4
+- http://localhost:8080/account/5
+- http://localhost:8080/account/6
+
+- http://localhost:8080/user/pasha
+- http://localhost:8080/user/nissan
+- http://localhost:8080/user/puertorico
 
 ### Available Services
 
@@ -45,32 +52,4 @@ Application starts a jetty server on localhost port 8080 An H2 in memory databas
 - 200 OK: The request has succeeded
 - 400 Bad Request: The request could not be understood by the server 
 - 404 Not Found: The requested resource cannot be found
-- 500 Internal Server Error: The server encountered an unexpected condition 
-
-### Sample JSON for User and Account
-##### User : 
-```sh
-{  
-  "userName":"test1",
-  "emailAddress":"test1@gmail.com"
-} 
-```
-##### User Account: : 
-
-```sh
-{  
-   "userName":"test1",
-   "balance":10.0000,
-   "currencyCode":"GBP"
-} 
-```
-
-#### User Transaction:
-```sh
-{  
-   "currencyCode":"EUR",
-   "amount":100000.0000,
-   "fromAccountId":1,
-   "toAccountId":2
-}
-```
+- 500 Internal Server Error: The server encountered an unexpected condition

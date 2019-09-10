@@ -47,7 +47,7 @@ public class AccountServiceIntegratedTest extends AbstractServerConnectionProvid
         //check the content
         String jsonString = EntityUtils.toString(response.getEntity());
         Account account = mapper.readValue(jsonString, Account.class);
-        assertTrue(account.getUserName().equals("yangluo"));
+        assertTrue(account.getUserName().equals("pasha"));
     }
 
     /*

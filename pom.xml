@@ -64,13 +64,13 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>9.2.3.v20140905</version>
+            <version>9.3.24.v20180605</version>
         </dependency>
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlet</artifactId>
-            <version>9.2.3.v20140905</version>
+            <version>9.3.24.v20180605</version>
         </dependency>
 
         <dependency>
@@ -114,7 +114,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.moneytransfer.Application</mainClass>
+                            <mainClass>com.revolut.moneytransfer.main.ApplicationStartServiceMain</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -133,7 +133,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.5.0</version>
                 <configuration>
-                    <mainClass>com.moneytransfer.Application</mainClass>
+                    <mainClass>com.revolut.moneytransfer.main.ApplicationStartServiceMain</mainClass>
                 </configuration>
             </plugin>
         </plugins>

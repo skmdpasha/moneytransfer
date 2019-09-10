@@ -20,9 +20,6 @@ import static org.junit.Assert.assertTrue;
 
 /**
  * Integration testing for RestAPI
- * Test data are initialised from src/test/resources/demo.sql
- * INSERT INTO User (UserName, EmailAddress) VALUES ('test2','test2@gmail.com');  --ID=1
-   INSERT INTO User (UserName, EmailAddress) VALUES ('test1','test1@gmail.com');  --ID=2
  */
 public class UserServiceIntegratedTest extends AbstractServerConnectionProvider {
 
@@ -33,7 +30,7 @@ public class UserServiceIntegratedTest extends AbstractServerConnectionProvider 
     */
     @Test
     public void testGetUser() throws IOException, URISyntaxException {
-        URI uri = builder.setPath("/user/yangluo").build();
+        URI uri = builder.setPath("/user/pasha").build();
         HttpGet request = new HttpGet(uri);
         HttpResponse response = client.execute(request);
         int statusCode = response.getStatusLine().getStatusCode();
@@ -42,8 +39,8 @@ public class UserServiceIntegratedTest extends AbstractServerConnectionProvider 
         //check the content
         String jsonString = EntityUtils.toString(response.getEntity());
         User user = mapper.readValue(jsonString, User.class);
-        assertTrue(user.getUserName().equals("yangluo"));
-        assertTrue(user.getEmailAddress().equals("yangluo@gmail.com"));
+        assertTrue(user.getUserName().equals("pasha"));
+        assertTrue(user.getEmailAddress().equals("pasha.nag@gmail.com"));
     }
 
      /*
